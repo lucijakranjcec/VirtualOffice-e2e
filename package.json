@@ -1,0 +1,15 @@
+{
+  "name": "virtualoffice-e2e",
+  "version": "1.0.0",
+  "description": "Set of Playwright end-to-end test developed to test a web application called Virtual Office.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucija Kranjčec",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "playwright": "^1.42.1"
+  }
+}
