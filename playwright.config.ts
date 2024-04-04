@@ -17,7 +17,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'localhost:8080',
+    baseURL: 'localhost:5001',
     headless: false,
     trace: 'on',
   },
