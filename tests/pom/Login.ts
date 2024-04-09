@@ -36,15 +36,16 @@ export class LoginPage {
     await expect(this.invalidCredentialsMessage).toBeVisible();
   }
  
-async loginEmployeer() {
-  await this.inputUsername.fill(process.env.EMPLOYEER_USERNAME!);
-  await this.inputPassword.fill(process.env.EMPLOYEER_PASSWORD!);
-  await this.buttonLogin.click();
-}
+  async loginEmployeer() {
+    await this.inputUsername.fill(process.env.EMPLOYEER_USERNAME!);
+    await this.inputPassword.fill(process.env.EMPLOYEER_PASSWORD!);
+    await this.buttonLogin.click();
+  }
 
-async loginEmployee() {
-  await this.inputUsername.fill(process.env.EMPLOYEE_PASSWORD!);
-  await this.inputPassword.fill(process.env.EMPLOYEE_PASSWORD!);
-  await this.buttonLogin.click();
-}
+  async loginEmployee() {
+    await this.inputUsername.fill(process.env.EMPLOYEE_PASSWORD!);
+    await this.inputPassword.fill(process.env.EMPLOYEE_PASSWORD!);
+    await this.buttonLogin.click();
+  }
+  
 }
