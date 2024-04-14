@@ -1,15 +1,13 @@
 import { expect, Locator, Page } from '@playwright/test';
 
-export class ExportEmployeeDataPage {
+export class EmployeeManagementPage {
 
   readonly page: Page;
-  
   readonly exportDataButton: Locator;
 
   constructor(page: Page) {
 
     this.page = page;
-
     this.exportDataButton = page.locator('//button[@id="exportButton"]');
     
   }
@@ -23,5 +21,4 @@ export class ExportEmployeeDataPage {
       // assert filename
       expect(download.suggestedFilename()).toBe("Employees.xlsx");
   }
-
 }
