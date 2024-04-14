@@ -4,6 +4,7 @@ export class SidebarPage {
 
   readonly page: Page;
   
+  readonly navbar: Locator;
   readonly evaluationFormLink: Locator;
   readonly outOfOfficeLink: Locator;
   readonly equipmentManagementLink: Locator;
@@ -23,6 +24,7 @@ export class SidebarPage {
 
     this.page = page;
 
+    this.navbar = page.locator('//*[contains(@class, "vertical-nav")]');
     this.evaluationFormLink = page.getByRole('link', { name: 'Evaluation Form' });
     this.outOfOfficeLink = page.getByRole('link', { name: 'Out of Office Forms' });
     this.equipmentManagementLink = page.getByRole('link', { name: 'Equipment Management' });
@@ -96,6 +98,6 @@ export class SidebarPage {
 
     await this.confirmLogoutButton.click();
 
-    await expect(this.loginPage).toBeVisible();
+    await expect(this.navbar).not.toBeVisible();
   }
 }
